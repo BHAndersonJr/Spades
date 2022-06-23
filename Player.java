@@ -8,7 +8,7 @@ public class Player {
 
     public Player(int playerNumber){
         //need to test
-        this.hand = new ArrayList<Card>();
+        this.hand = new ArrayList<>();
         this.playerNum = playerNumber;
     }
 
@@ -22,6 +22,12 @@ public class Player {
             //need to test
             System.out.println(this.hand.get(i).getSuit() + this.hand.get(i).getValue());
         }
+
+
+    }
+    public int playerBid(){
+        int bid = 0; //this needs to accept input from user
+        return bid;
 
 
     }
