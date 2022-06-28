@@ -11,6 +11,8 @@ public class Game {
     private int teamOneBid;
     private int teamTwoBid;
 
+    private String currentTrump;
+
 
 
 
@@ -39,6 +41,15 @@ public class Game {
         for(int i=0;i<52;i++){
             myPlayers.get(i%4).addCardToHand(deck.generateTopCard());
         }
+        //to show the different hands
+        System.out.println("player 1 hand");
+        this.myPlayers.get(0).printHand();
+        System.out.println("player 2 hand");
+        this.myPlayers.get(1).printHand();
+        System.out.println("player 3 hand");
+        this.myPlayers.get(2).printHand();
+        System.out.println("player 4 hand");
+        this.myPlayers.get(3).printHand();
 
     }
 

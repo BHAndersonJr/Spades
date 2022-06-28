@@ -15,5 +15,10 @@ public class Card {
         return value;
     }
 
+    @Override
+    public String toString(){
+        return  this.getSuit() + " "+ this.getValue()+ " ";
+    }
 
 }
+
