@@ -32,7 +32,6 @@ public class Deck {
         double randomValue = Math.random();
         int randomSelecter = (int) Math.round(randomValue);
         randomSelecter = randomSelecter * (myCards.size()-1);
-        System.out.println(randomSelecter);
         Card tempCard = myCards.get(randomSelecter);
         myCards.remove(randomSelecter);
         return tempCard;

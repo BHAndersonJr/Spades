@@ -10,6 +10,8 @@ public class Game {
     //players in this setup will always be on the same teams
     private int teamOneBid;
     private int teamTwoBid;
+    private int teamOneScore;
+    private int teamTwoScore;
 
     private String currentTrump;
 
@@ -34,10 +36,37 @@ public class Game {
 
     }
 
+    public void startGame(){
+
+
+        System.out.println("Game Started");
+
+        //first check and make sure the game isn't already over
+        if (teamOneScore >= gameScore || teamTwoScore >= gameScore){
+            System.out.println("Game is already over");
+        } else {
+            System.out.println("Time to play");
+            //deal cards
+
+            //collect bids
+
+            //play cards 13 times
+
+            //evaluate scores
+
+            //repeate till one teams score equals or is greater than gamescore
+        }
+    }
+
     public void dealCards(){
+
         //needs to be tested. The idea is that the function will go through each player
         //with the i%4 then the function add card to hand will add a rando card to each hand
         //till the deck is empty
+        System.out.println("the game score is "+this.gameScore);
+        System.out.println("Team One score is "+this.teamOneScore);
+        System.out.println("Team two score is "+this.teamTwoScore);
+
         for(int i=0;i<52;i++){
             myPlayers.get(i%4).addCardToHand(deck.generateTopCard());
         }
@@ -52,6 +81,8 @@ public class Game {
         this.myPlayers.get(3).printHand();
 
     }
+
+
 
     public void colletBids(){
         //idea for this function will be to loop through the four players and collect their bids.
